@@ -1,17 +1,84 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+    <div class="label-option">
+        <ion-label style="color: white;">WOMEN'S SHOES</ion-label>
+        <ion-select [(ngModel)]="gender">
+            <ion-option>
+                <ion-segment>
+                    <ion-segment-button>hglv</ion-segment-button>
+                    <ion-segment-button>hglv</ion-segment-button>
+                    <ion-segment-button>hglv</ion-segment-button>
+                </ion-segment>
+            </ion-option>
+
+            
+        </ion-select>
+
+    </div>
+    <button class="button-search" ion-button large>
+        <ion-icon name="ios-search-outline"></ion-icon>
+    </button>
+    <button class="button-more" ion-button large>
+        <ion-icon name="ios-list-outline"></ion-icon>
+    </button>
+</ion-navbar>
+   <ion-toolbar>
+      <ion-content  #MultiItemsScrollingTabs class="tabsContent">
+        <ion-segment  class="SwipedTabs-tabs"  >
+          <ion-segment-button *ngFor='let tab of tabs ; let i = index ' id="tabTitle{{i}}" value="IngoreMe" (click)="selectTab(i)"
+          [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'   >
+          {{tab}}
+        </ion-segment-button>
+      </ion-segment>
+      <!-- here is our dynamic line  "indicator"-->
+      <div id='indicator' class="SwipedTabs-indicatorSegment"></div>
+    </ion-content>
+  </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+<ion-content padding>
+<ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+    (ionSlideDidChange)="updateIndicatorPosition()"
+    (ionSlideWillChange)="scrollIndicatiorTab()"
+    (panend)="updateIndicatorPositionOnTouchEnd()"
+    [pager]="false">
+          <ion-slide>
+            <h1>Page 0 </h1>
+          </ion-slide>
+          <ion-slide>
+             <h1>Page 1 </h1>
+          </ion-slide>
+          <ion-slide>
+             <h1>Page 2 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 3 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 4 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 5 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 6 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 7 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 8 </h1>
+          </ion-slide>
+          <ion-slide>
+            <h1>Page 9 </h1>
+          </ion-slide>
+
+
+          <ion-slide>
+            <h1> page For tutorual </h1>
+          </ion-slide>
+
+    </ion-slides>
 </ion-content>

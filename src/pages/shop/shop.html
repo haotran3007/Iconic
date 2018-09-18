@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <h3 class="shop-name" (click)="openDiv()">SHOP MEN</h3>
+    <button class="button-search" ion-button large >
+      <ion-icon name="ios-search-outline"></ion-icon>
+    </button>
+    <button class="button-more" ion-button large>
+      <ion-icon name="md-more"></ion-icon>
+    </button>
+
+  </ion-navbar>
+
+  <ion-toolbar class="scroll-bar">
+    <ion-content #MultiItemsScrollingTabs class="tabsContent">
+      <ion-segment class="SwipedTabs-tabs">
+        <ion-segment-button *ngFor='let tab of tabs ; let i = index ' id="tabTitle{{i}}" (click)="selectTab(i)"
+          [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'>
+          {{tab}}
+        </ion-segment-button>
+      </ion-segment>
+      <!-- here is our dynamic line  "indicator"-->
+      <div id='indicator' class="SwipedTabs-indicatorSegment"></div>
+    </ion-content>
+  </ion-toolbar>
+  <div class="mini-menu" id="select" style="display: none">
+      <p>View Men's Daily</p>
+      <p>View Woman's Daily</p>
+    </div>
+</ion-header>
+
+<!--Menu modal-->
+
+<!-- feed item template collection -->
+
+<ion-content>
+
+  <ion-slides #SwipedTabsSlider (ionSlideDrag)="animateIndicator($event)" (ionSlideDidChange)="updateIndicatorPosition()"
+    (ionSlideWillChange)="scrollIndicatiorTab()" (panend)="updateIndicatorPositionOnTouchEnd()" [pager]="false">
+
+    <!--item1-->
+    <ion-slide>
+      <div class="list-product-item">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+            <ion-col col-6>
+              <product-items></product-items>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<!-- <div class="clicktoview" id="viewDiv">
+  <ion-segment>
+    <ion-segment-button *ngFor='let menu of menus ; let a = index' id="menuTitle{{i}}" (click)="selectMenu(a)">
+      {{menu}}
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-slides>
+    <ion-slide></ion-slide>
+  </ion-slides>
+
+</div> -->

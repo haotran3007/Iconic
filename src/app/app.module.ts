@@ -3,21 +3,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { ShopPage } from '../pages/shop/shop';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { DailyPage } from '../pages/daily/daily';
 import { TabsPage } from '../pages/tabs/tabs';
+import {ProfilePage} from '../pages/profile/profile'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {FeedItemComponent} from '../components/feed-item/feed-item';
+import {SliderItemComponent} from '../components/slider-item/slider-item';
+import {AdvertItemComponent} from '../components/advert-item/advert-item';
+import {CollItemComponent} from '../components/coll-item/coll-item';
+import {SlideMenuComponent} from '../components/slide-menu/slide-menu';
+import {ProductItemsComponent} from '../components/product-items/product-items';
+import {MenuModalComponent} from '../components/menu-modal/menu-modal';
+
+
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    ShopPage,
     ContactPage,
-    HomePage,
-    TabsPage
+    DailyPage,
+    TabsPage,
+    FeedItemComponent,
+    SliderItemComponent,
+    AdvertItemComponent,
+    CollItemComponent,
+    SlideMenuComponent,
+    ProductItemsComponent,
+    MenuModalComponent,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -26,10 +44,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    ShopPage,
     ContactPage,
-    HomePage,
-    TabsPage
+    DailyPage,
+    TabsPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,158 @@
+page-shop {
+
+   .swiper-slide{
+       position: relative;
+       display: block;
+   }
+
+   .swiper-container{
+       height: max-content;
+   }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: black;
+    }
+
+    .toolbar-background-ios {
+        background: #000;
+    }
+    
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background-color: black;
+    }
+
+    .buttonshop{
+        text-align: right;
+
+        .button-md{
+            background-color:black;
+            box-shadow: none;
+        }
+    }
+
+    .shop-name{
+        position: relative;
+        text-align: center;
+        color: white;
+   
+    }
+
+    .button-search{
+        position: absolute;
+        top: 0px;
+        left: 8px;
+        color:#ffffff;
+        background-color: black;
+
+        .button-ios.activated{
+            background-color: black;
+        }
+
+    }
+
+    .button-more{
+        position: absolute;
+        top: 0px;
+        right: 8px;
+        color: #ffffff;
+        background-color: black;
+    }
+
+    ion-segment {
+        display: block;
+        white-space: nowrap;
+        font-size: 0;
+        overflow: auto;
+    
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+    
+        ion-segment-button.segment-button {
+            display: inline-block;
+            min-width: 100px;
+            width: auto;
+        }
+    }
+
+    .label-option{
+        width: 100%;
+        text-align: center;
+        height: 32px;
+    }
+
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.2s all;
+        -moz-transition:  0.2s all;
+        -o-transition:  0.2s all;
+        transition:  0.2s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color:#000000 !important;
+    }
+
+    .SwipedTabs-tabs ion-segment-button
+    {
+      border:none !important;
+      color: #8e8e8e !important;
+      background-color:white!important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:#000000 !important;
+    }
+
+    .SwipedTabs-tabs
+    {
+        width: fit-content !important;
+    }
+
+     .toolbar *
+    {
+        margin: 0 !important;
+    }
+
+    .tabsContent .scroll-content
+    {
+        overflow-x: scroll !important;
+    }
+
+    .tabsContent
+    {
+        height: 50px !important;
+    }
+
+    .segment-button
+    {
+        max-width: initial !important;
+        flex: auto !important;
+        width: initial !important;
+    }
+
+    .scroll-bar.toolbar-md{
+        padding: 0px !important;
+        min-height: 50px;
+    }
+
+    .scroll-content{
+        padding-top: 9px;
+    }
+
+    .clicktoview{
+        position: absolute;
+        z-index: inherit;
+    }
+}
+
+
+
+    
