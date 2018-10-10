@@ -11,4 +11,17 @@ product-items {
         }
     }
 
+    .button-like{
+        position: absolute;
+        top: 55px;
+        height: 30px;
+        width: 30px;
+        left: 127px;
+        background-color: white;
+
+        ion-icon{
+            font-size: 30px;
+        }
+    }
+
 }

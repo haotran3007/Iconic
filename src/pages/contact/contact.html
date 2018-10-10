@@ -1,5 +1,6 @@
 <ion-header>
     <ion-navbar style="text-align: center">
+        <!--navbar product info-->
         <h3>CHECKOUT</h3>
         <p>1 item A$91.00</p>
     </ion-navbar>
@@ -12,12 +13,15 @@
 <ion-content>
 
     <ion-segment [(ngModel)]="wishlist" (ionChange)="slides.slideTo(wishlist)">
+        <!--segment button 1-->
         <ion-segment-button value="0">
             BAG
         </ion-segment-button>
+        <!--segment button 2-->
         <ion-segment-button value="1">
             DELIVERY
         </ion-segment-button>
+        <!--segment button 3-->
         <ion-segment-button value="2">
             PAYMENT
         </ion-segment-button>
@@ -31,7 +35,7 @@
                         <ion-icon name="logo-dropbox"> PARCEL 1 - SENT BY THE ICONIC</ion-icon>
                     </ion-item>
                     <ion-item>
-
+                        <!--img product-->
                         <div class="img-item">
                             <img src="./assets/imgs/dress2.jpg">
                         </div>
@@ -52,14 +56,15 @@
                     </ion-item>
 
                     <div class="select-product">
-                        <ion-select [(ngModel)]="QTI" interface="action-sheet" >
-                            <ion-option  value="1">Move to wishlist</ion-option>
+                        <ion-select [(ngModel)]="QTI" interface="action-sheet">
+                            <ion-option value="1">Move to wishlist</ion-option>
                             <ion-option value="2">Remove item</ion-option>
                         </ion-select>
                     </div>
 
                     <div class="select-item">
-                        <ion-select [(ngModel)]="size" interface="action-sheet" style="justify-content: center" (ionChange)="select-item">
+                        <ion-select [(ngModel)]="size" interface="action-sheet" style="justify-content: center"
+                            (ionChange)="select-item">
                             <ion-label>CHANGE QUANTITY</ion-label>
                             <ion-option value="1" checked="checked">Move to wishlist</ion-option>
                             <ion-option value="2">Remove item</ion-option>
@@ -70,7 +75,7 @@
                     </div>
 
                     <div class="select-size">
-                        <ion-select [(ngModel)]="SIZE" interface="action-sheet" >
+                        <ion-select [(ngModel)]="SIZE" interface="action-sheet">
                             <ion-option value="2">Remove item</ion-option>
                             <ion-option>
                                 <ion-item>
