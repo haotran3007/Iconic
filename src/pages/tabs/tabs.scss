@@ -1,0 +1,9 @@
+tab-bar{
+    .tabs-ios .tab-button[aria-selected=true] {
+        color:black;
+    }
+
+    .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+        color: #222;
+    }
+}

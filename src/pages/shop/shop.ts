@@ -1,10 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, Content, Platform } from 'ionic-angular';
+import { SearchPage } from '../search/search';
+import { FilterCatPage } from '../filter-cat/filter-cat'
+
 
 
 @Component({
   selector: 'page-shop',
-  templateUrl: 'shop.html'
+  templateUrl: 'shop.html',
 })
 export class ShopPage {
 
@@ -18,11 +21,6 @@ export class ShopPage {
   isRight: boolean = true;
   isLeft: boolean = true;
   tabs: any = [];
-  
-  SwipedMenusIndicator: any = null;
-  menuTitleWidthArray: any = [];
-  menus: any = [];
-
 
   constructor(public navCtrl: NavController, platform: Platform) {
     this.tabs = ["ALL", "DRESSES", "TOPS", "T-SHIRTS & SINGLETS", "COAT & JACKETS", "JUMPERS & CARDIGANS", "PANTS", "SKIRTS", "JEANS", "SWIMMEAR", "SHORTS", "SWEATS & HOODIES", "LINGERIE"];
@@ -34,7 +32,7 @@ export class ShopPage {
   ionViewDidEnter() {
     this.SwipedTabsIndicator = document.getElementById("indicator");
     for (let i in this.tabs)
-      this.tabTitleWidthArray.push(document.getElementById("tabTitle" + i).offsetWidth);
+    this.tabTitleWidthArray.push(document.getElementById("tabTitle" + i).offsetWidth);
     this.selectTab(0);
   }
 
@@ -108,23 +106,18 @@ export class ShopPage {
 
   }
 
-  openDiv() {
-    // document.getElementById("viewDiv").style.display = "block";
-    console.log('clicked');
+  gotosearch(){
+    this.navCtrl.push(SearchPage);
   }
 
-  // selectMenu(index) {
-  //   this.menus = ["SHOP WOMAN", "SHOP MEN", "SHOP KIDS"];
-  //   this.SwipedMenusIndicator.style.width = this.menuTitleWidthArray[index] + "px";
-  //   this.SwipedMenusIndicator.style.webkitTransform = 'translate3d(' + (this.calculateDistanceToSpnd(index)) + 'px,0,0)';
-  //   this.SwipedMenusSlider.slideTo(index);
-  // }
+  openDiv(){
+    document.getElementById("mini-cat-component").style.display = "block";
 
-  // menuViewDidEnter() {
-  //   for (let a in this.menus)
-  //     this.menuTitleWidthArray.push(document.getElementById("menuTitle" + a).offsetWidth);
-  //   this.selectMenu(0);
-  // }
+  }
+
+  navMenu(){
+    this.navCtrl.push(FilterCatPage);
+  }
 
 }
 

@@ -1,0 +1,50 @@
+page-search {
+    .searchbar-md {
+        padding: 0px;
+    }
+
+    .camera{
+        position: absolute;
+        right: 7px;
+        top: 5px;
+        color: black
+    }
+
+    .button-md{
+    background-color: #ffffff00;
+    box-shadow: none;
+        .button-md.active{
+            box-shadow: none;
+        }
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: #488aff00;
+    }
+
+    ion-searchbar{
+        top: -43px;
+    }
+
+    .button-back{
+        position: absolute;
+        right: 7px;
+        top: 5px;
+        color: black
+    }
+
+    ion-buttons{
+        position: relative;
+        z-index: 1;
+        top: 0px;
+    }
+
+    .button-inner{
+        color: black;
+    }
+
+    .searchbar-search-icon{
+        display: none;
+    }
+
+}

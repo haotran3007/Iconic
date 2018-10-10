@@ -10,69 +10,131 @@
   </ion-navbar>
   <!--view mini menu-->
   <div class="mini-menu" id="select" style="display: none">
-    <p>View Men's Daily</p>
-    <p>View Woman's Daily</p>
+    <p (click)="viewManProduct()">View Men's Daily</p>
+    <p (click)="viewWomanProduct()">View Woman's Daily</p>
   </div>
 </ion-header>
 
 <!-- feed item template collection -->
 
 <ion-content (click)="hideButton()">
-  <!-- item1 -->
-  <feed-item></feed-item>
+  <div id="men" >
+    <!-- item1 -->
+    <feed-item></feed-item>
 
-  <!-- item2 -->
-  <feed-item></feed-item>
+    <!-- item2 -->
+    <feed-item></feed-item>
 
-  <!-- item recently view -->
-  <div class="item-view">
-    <div class="list-of-product-box">
-      <ion-row class="list-products-header">
-        <h6 class="product-title">
-          YOUR RECENTLY VIEWED ITEMS
-        </h6>
-      </ion-row>
+    <!-- item recently view -->
+    <div class="item-view">
+      <div class="list-of-product-box">
+        <ion-row class="list-products-header">
+          <h6 class="product-title">
+            YOUR RECENTLY VIEWED ITEMS
+          </h6>
+        </ion-row>
 
-      <!-- Products Slider -->
-      <ion-slides #ProductSliderOne>
-        <!-- slide item 1 -->
-        <ion-slide>
-          <slider-item></slider-item>
-        </ion-slide>
-        <!-- slide item 2 -->
-        <ion-slide>
-          <slider-item></slider-item>
-        </ion-slide>
-        <!-- slide item 3 -->
-        <ion-slide>
-          <slider-item></slider-item>
-        </ion-slide>
-        <!-- slide item 4 -->
-        <ion-slide>
-          <slider-item></slider-item>
-        </ion-slide>
-      </ion-slides>
+        <!-- Products Slider -->
+        <ion-slides #ProductSliderOne>
+          <!-- slide item 1 -->
+          <ion-slide>
+            <slider-item></slider-item>
+          </ion-slide>
+          <!-- slide item 2 -->
+          <ion-slide>
+            <slider-item></slider-item>
+          </ion-slide>
+          <!-- slide item 3 -->
+          <ion-slide>
+            <slider-item></slider-item>
+          </ion-slide>
+          <!-- slide item 4 -->
+          <ion-slide>
+            <slider-item></slider-item>
+          </ion-slide>
+        </ion-slides>
+      </div>
     </div>
+
+    <!-- item3 -->
+    <feed-item></feed-item>
+
+    <!-- item4 -->
+    <feed-item></feed-item>
+
+    <!-- item advertising -->
+    <advert-item></advert-item>
+
+    <!-- item5 -->
+    <feed-item></feed-item>
+
+    <!-- item6 -->
+    <feed-item></feed-item>
+
+    <!-- item collection -->
+    <coll-item></coll-item>
+
+    <!-- item7 -->
+    <feed-item></feed-item>
   </div>
 
-  <!-- item3 -->
-  <feed-item></feed-item>
-
-  <!-- item4 -->
-  <feed-item></feed-item>
-
-  <!-- item advertising -->
-  <advert-item></advert-item>
-
-  <!-- item5 -->
-  <feed-item></feed-item>
-
-  <!-- item6 -->
-  <feed-item></feed-item>
-
-  <!-- item collection -->
-  <coll-item></coll-item>
-
-  <!-- item7 -->
-  <feed-item></feed-item>
+  <div id="women">
+      <!-- item1 -->
+      <feed-item></feed-item>
+  
+      <!-- item2 -->
+      <feed-item></feed-item>
+  
+      <!-- item recently view -->
+      <div class="item-view">
+        <div class="list-of-product-box">
+          <ion-row class="list-products-header">
+            <h6 class="product-title">
+              YOUR RECENTLY VIEWED ITEMS
+            </h6>
+          </ion-row>
+  
+          <!-- Products Slider -->
+          <ion-slides #ProductSliderOne>
+            <!-- slide item 1 -->
+            <ion-slide>
+              <slider-item></slider-item>
+            </ion-slide>
+            <!-- slide item 2 -->
+            <ion-slide>
+              <slider-item></slider-item>
+            </ion-slide>
+            <!-- slide item 3 -->
+            <ion-slide>
+              <slider-item></slider-item>
+            </ion-slide>
+            <!-- slide item 4 -->
+            <ion-slide>
+              <slider-item></slider-item>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </div>
+  
+      <!-- item3 -->
+      <feed-item></feed-item>
+  
+      <!-- item4 -->
+      <feed-item></feed-item>
+  
+      <!-- item advertising -->
+      <advert-item></advert-item>
+  
+      <!-- item5 -->
+      <feed-item></feed-item>
+  
+      <!-- item6 -->
+      <feed-item></feed-item>
+  
+      <!-- item collection -->
+      <coll-item></coll-item>
+  
+      <!-- item7 -->
+      <feed-item></feed-item>
+    </div>
 </ion-content>

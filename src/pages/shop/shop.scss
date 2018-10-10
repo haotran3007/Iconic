@@ -9,10 +9,6 @@ page-shop {
        height: max-content;
    }
 
-    .button-md:hover:not(.disable-hover) {
-        background-color: black;
-    }
-
     .toolbar-background-ios {
         background: #000;
     }
@@ -26,9 +22,13 @@ page-shop {
         text-align: right;
 
         .button-md{
-            background-color:black;
+            background-color:#32bed3;
             box-shadow: none;
         }
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: none;
     }
 
     .shop-name{
@@ -91,10 +91,10 @@ page-shop {
         -o-transition:  0.2s all;
         transition:  0.2s all;
         transform-origin: top 0 left 0;
-        height: 1px;
+        height: 4px;
         position: relative;
-        top: -2px;
-        background-color:#000000 !important;
+        top: -4px;
+        background-color: #23b5dd !important;
     }
 
     .SwipedTabs-tabs ion-segment-button
@@ -151,6 +151,30 @@ page-shop {
         position: absolute;
         z-index: inherit;
     }
+
+    ion-slide{
+        width: 100%;
+    }
+
+    mini-cat{
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        width: 300px;
+        height: 515px;
+        top: 120px;
+        margin-left: 40px;
+    }
+
+    .minicat{
+        width: 100%;
+        height: 100%;
+    }
+
+    .segment-md .segment-button{
+        font-weight: 900;
+    }
+
 }
 
 

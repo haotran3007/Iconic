@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile'
+import { SearchPage } from '../search/search'
 
 @Component({
   selector: 'page-daily',
@@ -32,7 +32,19 @@ export class DailyPage {
   }
   
   gotosearch(){
-    this.navCtrl.push(ProfilePage);
+    this.navCtrl.push(SearchPage);
+  }
+
+  viewManProduct(){
+    document.getElementById('men').style.display = "block";
+    document.getElementById('women').style.display = "none";
+    document.getElementById("select").style.display = "none";
+  }
+
+  viewWomanProduct(){
+    document.getElementById('men').style.display = "none";
+    document.getElementById('women').style.display = "block";
+    document.getElementById("select").style.display = "none";
   }
 
 }

@@ -1,84 +1,103 @@
 <ion-header>
-  <ion-navbar>
-    <div class="label-option">
-        <ion-label style="color: white;">WOMEN'S SHOES</ion-label>
-        <ion-select [(ngModel)]="gender">
-            <ion-option>
-                <ion-segment>
-                    <ion-segment-button>hglv</ion-segment-button>
-                    <ion-segment-button>hglv</ion-segment-button>
-                    <ion-segment-button>hglv</ion-segment-button>
-                </ion-segment>
-            </ion-option>
-
-            
-        </ion-select>
-
-    </div>
-    <button class="button-search" ion-button large>
-        <ion-icon name="ios-search-outline"></ion-icon>
-    </button>
-    <button class="button-more" ion-button large>
-        <ion-icon name="ios-list-outline"></ion-icon>
-    </button>
-</ion-navbar>
-   <ion-toolbar>
-      <ion-content  #MultiItemsScrollingTabs class="tabsContent">
-        <ion-segment  class="SwipedTabs-tabs"  >
-          <ion-segment-button *ngFor='let tab of tabs ; let i = index ' id="tabTitle{{i}}" value="IngoreMe" (click)="selectTab(i)"
-          [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'   >
-          {{tab}}
-        </ion-segment-button>
-      </ion-segment>
-      <!-- here is our dynamic line  "indicator"-->
-      <div id='indicator' class="SwipedTabs-indicatorSegment"></div>
-    </ion-content>
-  </ion-toolbar>
-
+    <ion-navbar style="text-align: center">
+        <h3>CHECKOUT</h3>
+        <p>1 item A$91.00</p>
+    </ion-navbar>
+    <ion-buttons left>
+        <button ion-button ion-only (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
 </ion-header>
+<ion-content>
 
+    <ion-segment [(ngModel)]="wishlist" (ionChange)="slides.slideTo(wishlist)">
+        <ion-segment-button value="0">
+            BAG
+        </ion-segment-button>
+        <ion-segment-button value="1">
+            DELIVERY
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            PAYMENT
+        </ion-segment-button>
+    </ion-segment>
 
-<ion-content padding>
-<ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
-    (ionSlideDidChange)="updateIndicatorPosition()"
-    (ionSlideWillChange)="scrollIndicatiorTab()"
-    (panend)="updateIndicatorPositionOnTouchEnd()"
-    [pager]="false">
-          <ion-slide>
-            <h1>Page 0 </h1>
-          </ion-slide>
-          <ion-slide>
-             <h1>Page 1 </h1>
-          </ion-slide>
-          <ion-slide>
-             <h1>Page 2 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 3 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 4 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 5 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 6 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 7 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 8 </h1>
-          </ion-slide>
-          <ion-slide>
-            <h1>Page 9 </h1>
-          </ion-slide>
+    <div class="slides-wishlist">
+        <ion-slides #slides (ionSlideWillChange)="segment=''+slides.getActiveIndex()">
+            <ion-slide>
+                <ion-list *ngFor="let wish1 of wish1s">
+                    <ion-item>
+                        <ion-icon name="logo-dropbox"> PARCEL 1 - SENT BY THE ICONIC</ion-icon>
+                    </ion-item>
+                    <ion-item>
 
+                        <div class="img-item">
+                            <img src="./assets/imgs/dress2.jpg">
+                        </div>
+                        <div class="info-item">
+                            <div class="wish-title">
+                                {{wish1.title}}
+                            </div>
+                            <div class="wish-type">
+                                {{wish1.type}}
+                            </div>
+                            <div class="wish-price">
+                                {{wish1.price}}
+                            </div>
+                        </div>
+                        <button ion-button icon-only class="button-item">
+                            <ion-icon name="ios-more-outline"></ion-icon>
+                        </button>
+                    </ion-item>
 
-          <ion-slide>
-            <h1> page For tutorual </h1>
-          </ion-slide>
+                    <div class="select-product">
+                        <ion-select [(ngModel)]="QTI" interface="action-sheet" >
+                            <ion-option  value="1">Move to wishlist</ion-option>
+                            <ion-option value="2">Remove item</ion-option>
+                        </ion-select>
+                    </div>
 
-    </ion-slides>
+                    <div class="select-item">
+                        <ion-select [(ngModel)]="size" interface="action-sheet" style="justify-content: center" (ionChange)="select-item">
+                            <ion-label>CHANGE QUANTITY</ion-label>
+                            <ion-option value="1" checked="checked">Move to wishlist</ion-option>
+                            <ion-option value="2">Remove item</ion-option>
+                            <ion-option value="3">1</ion-option>
+                            <ion-option value="4">2</ion-option>
+                            <ion-option value="5">3</ion-option>
+                        </ion-select>
+                    </div>
+
+                    <div class="select-size">
+                        <ion-select [(ngModel)]="SIZE" interface="action-sheet" >
+                            <ion-option value="2">Remove item</ion-option>
+                            <ion-option>
+                                <ion-item>
+                                    <ion-label>1</ion-label>
+                                    <ion-radio value-="test"></ion-radio>
+                                </ion-item>
+                            </ion-option>
+                        </ion-select>
+                    </div>
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list>
+                    <ion-item>
+
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list>
+                    <ion-item>
+
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+    </div>
 </ion-content>

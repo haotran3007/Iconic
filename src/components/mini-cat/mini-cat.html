@@ -1,0 +1,47 @@
+<div class="mini-cat">
+  <div class="segment">
+    <ion-segment (ionChange)="slides.slideTo(segment)" [(ngModel)]="segment">
+      <!--segment button 1-->
+      <ion-segment-button value="0">
+        shop men
+      </ion-segment-button>
+      <!--segment button 2-->
+      <ion-segment-button value="1">
+        shop woman
+      </ion-segment-button>
+      <!--segment button 3-->
+      <ion-segment-button value="2">
+        shop kids
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="slides-segment">
+    <ion-slides #slides (ionSlideWillChange)="segment=''+slides.getActiveIndex()">
+      <!--slide 1-->
+      <ion-slide>
+        <ion-list *ngFor="let cat1 of cat1s">
+          <ion-item>
+            {{cat1.title}}
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <!--slide 2-->
+      <ion-slide>
+        <ion-list *ngFor="let cat2 of cat2s">
+          <ion-item>
+            {{cat2.title}}
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <!--slide 3-->
+      <ion-slide>
+        <ion-list *ngFor="let cat3 of cat3s">
+          <ion-item>
+            {{cat3.title}}
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>

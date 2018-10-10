@@ -5,6 +5,7 @@ import { ContactPage } from '../contact/contact';
 import { DailyPage } from '../daily/daily';
 
 @Component({
+  selector: 'tab-bar',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

@@ -1,0 +1,26 @@
+page-filter-cat {
+    ion-title{
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    .reset{
+        position: absolute;
+        right: 10px;
+        top: 21px;
+        font-family: inherit;
+        font-size: 15px;
+        color: #23b5dd;
+        background-color: #f8f8f8;
+    }
+
+        
+    .label-md {
+        margin: 13px 8px 13px 13px;        
+    }
+    
+    .item-md {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

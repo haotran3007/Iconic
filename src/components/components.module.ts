@@ -5,7 +5,9 @@ import { AdvertItemComponent } from './advert-item/advert-item';
 import { CollItemComponent } from './coll-item/coll-item';
 import { SlideMenuComponent } from './slide-menu/slide-menu';
 import { ProductItemsComponent } from './product-items/product-items';
-import { MenuModalComponent } from './menu-modal/menu-modal';
+import { MiniCatComponent } from './mini-cat/mini-cat';
+import { WishlistComponent } from './wishlist/wishlist';
+import { CatCheckComponent } from './cat-check/cat-check';
 @NgModule({
 	declarations: [FeedItemComponent,
     SliderItemComponent,
@@ -13,14 +15,19 @@ import { MenuModalComponent } from './menu-modal/menu-modal';
     CollItemComponent,
     SlideMenuComponent,
     ProductItemsComponent,
-    MenuModalComponent],
-	imports: [],
+    MiniCatComponent,
+    WishlistComponent,
+    CatCheckComponent,],
+    imports: [],
 	exports: [FeedItemComponent,
     SliderItemComponent,
     AdvertItemComponent,
     CollItemComponent,
     SlideMenuComponent,
     ProductItemsComponent,
-    MenuModalComponent]
+    MiniCatComponent,
+    WishlistComponent,
+    CatCheckComponent,
+    ]
 })
 export class ComponentsModule {}

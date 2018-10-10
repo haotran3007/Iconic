@@ -18,3 +18,10 @@
 button.activated {
     background-color: transparent !important;
 }
+
+.action-sheet-md .action-sheet-group .button-inner {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: center !important;
+}

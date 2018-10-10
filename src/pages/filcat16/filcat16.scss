@@ -1,0 +1,35 @@
+page-filcat16 {
+    .item-md .radio-md {
+        margin-left: 15px;
+        margin-top: 0px;
+        position: absolute;
+        display: block;
+    }
+
+    .item-radio.item-md ion-label {
+        margin-left: 40px;
+    }
+
+    ion-title{
+        text-align: center;
+        margin-right: 15px;
+    }
+
+    ion-label{
+        font-weight:100;
+        font-family: "Century Gothic Full Stack";
+
+    }
+
+    .item-radio-checked.item-md ion-label {
+        color:#23b5dd;
+    }
+
+    .radio-md .radio-checked {
+        border-color: #23b5dd;
+    }
+
+    .radio-md .radio-inner {
+        background-color:#23b5dd;
+    }
+}
